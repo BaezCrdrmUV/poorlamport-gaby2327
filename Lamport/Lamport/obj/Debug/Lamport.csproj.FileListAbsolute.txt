@@ -1,0 +1,14 @@
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\bin\Debug\Lamport.exe.config
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\bin\Debug\Lamport.exe
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\bin\Debug\Lamport.pdb
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.csprojAssemblyReference.cache
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\MainWindow.g.cs
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\App.g.cs
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport_MarkupCompile.cache
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport_MarkupCompile.lref
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\MainWindow.baml
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.g.resources
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.Properties.Resources.resources
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.csproj.GenerateResource.cache
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.exe
+C:\Users\USER8\source\repos\MessageService\poorlamport-gaby2327\Lamport\Lamport\obj\Debug\Lamport.pdb
