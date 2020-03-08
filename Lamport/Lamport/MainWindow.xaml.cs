@@ -20,48 +20,81 @@ namespace Lamport
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		int[] procesoUno;
-		int[] procesoDos;
-		int[] procesoTres;
-		int contadorProcesoUno = 0;
-		int contadorProcesoDos = 0;
-		int contadorProcesoTres = 0;
-
 		public MainWindow()
 		{
 			InitializeComponent();
-
-
 		}
 
-		private void ButtonProceso1Envio2_Click(object sender, RoutedEventArgs e)
-		{
+		Proceso procesoUno = new Proceso(1, 0);
+		Proceso procesoDos = new Proceso(2, 0);
+		Proceso procesoTres = new Proceso(3, 0);
 
+		private void ButtonProceso1_Click(object sender, RoutedEventArgs e)
+		{
+			if (ComboBoxProceso1.SelectedIndex != -1)
+			{
+				switch (ComboBoxProceso1.SelectedIndex)
+				{
+					case 0:
+						EnviarMensaje(procesoUno, procesoDos);
+						break;
+					case 1:
+						EnviarMensaje(procesoUno, procesoTres);
+						break;
+				}
+			}
+			else
+			{
+				MessageBox.Show("Seleccione un proceso para enviar el mensaje");
+			}
 		}
 
-		private void ButtonProceso1Envio3_Click(object sender, RoutedEventArgs e)
+		private void ButtonProceso2_Click(object sender, RoutedEventArgs e)
 		{
-
+			if (ComboBoxProceso2.SelectedIndex != -1)
+			{
+				switch (ComboBoxProceso2.SelectedIndex)
+				{
+					case 0:
+						EnviarMensaje(procesoDos, procesoUno);
+						break;
+					case 1:
+						EnviarMensaje(procesoDos, procesoTres);
+						break;
+				}
+			}
+			else
+			{
+				MessageBox.Show("Seleccione un proceso para enviar el mensaje");
+			}
 		}
 
-		private void ButtonProceso2Envio1_Click(object sender, RoutedEventArgs e)
+		private void ButtonProceso3_Click(object sender, RoutedEventArgs e)
 		{
-
+			if (ComboBoxProceso3.SelectedIndex != -1)
+			{
+				switch (ComboBoxProceso3.SelectedIndex)
+				{
+					case 0:
+						EnviarMensaje(procesoTres, procesoUno);
+						break;
+					case 1:
+						EnviarMensaje(procesoTres, procesoDos);
+						break;
+				}
+			}
+			else
+			{
+				MessageBox.Show("Seleccione un proceso para enviar el mensaje");
+			}
 		}
 
-		private void ButtonProceso2Envio3_Click(object sender, RoutedEventArgs e)
+		private void EnviarMensaje(Proceso proceso, Proceso procesoDestinatario)
 		{
-
-		}
-
-		private void ButtonProceso3Envio1_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void ButtonProceso3Envio2_Click(object sender, RoutedEventArgs e)
-		{
-
+			Mensaje mensaje = new Mensaje();
+			string historialEnvios = proceso.EnviarMensaje(procesoDestinatario, mensaje);
+			TextBoxHistorial.Text = TextBoxHistorial.Text + Environment.NewLine + historialEnvios;
+			TextBoxHistorial.ScrollToEnd();
 		}
 	}
 }

@@ -6,58 +6,66 @@
         xmlns:local="clr-namespace:Lamport"
         mc:Ignorable="d"
         Title="Reloj lógico de Lamport" Height="450" Width="800" Background="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Recursos/Reloj.png">
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="82*"/>
-			<RowDefinition Height="129*"/>
-		</Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="258"/>
+        </Grid.RowDefinitions>
 
-		<Label Content="RELOJ LÓGICO DE LAMPORT" HorizontalAlignment="Left" Margin="163,9,0,0" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="36" Background="{x:Null}" FontWeight="Bold" Height="54" VerticalAlignment="Top">
-			<Label.Foreground>
-				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#FF3CB4B4" Offset="0"/>
-					<GradientStop Color="#FF3498DB" Offset="1"/>
-				</LinearGradientBrush>
-			</Label.Foreground>
-		</Label>
-		<Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="49,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
-		<Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="297,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
-		<Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="547,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
-		<Image HorizontalAlignment="Left" Height="59" Margin="78,14,0,0" VerticalAlignment="Top" Width="54" Source="Recursos/Reloj.png"/>
-		<Rectangle HorizontalAlignment="Left" Height="49" Margin="49,96,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
-			<Rectangle.Fill>
-				<SolidColorBrush Color="White" Opacity="0.5"/>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Rectangle HorizontalAlignment="Left" Height="49" Margin="297,96,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
-			<Rectangle.Fill>
-				<SolidColorBrush Color="White" Opacity="0.5"/>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Label Content="PROCESO 2" HorizontalAlignment="Left" Margin="329,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
-		<Rectangle HorizontalAlignment="Left" Height="49" Margin="547,100,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
-			<Rectangle.Fill>
-				<SolidColorBrush Color="White" Opacity="0.5"/>
-			</Rectangle.Fill>
-		</Rectangle>
-		<Label Content="PROCESO 3" HorizontalAlignment="Left" Margin="584,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
-		<Label Content="PROCESO 1" HorizontalAlignment="Left" Margin="78,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
-		<Label Content="Enviar a proceso:" HorizontalAlignment="Left" Margin="63,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="20" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
-		<Button x:Name="ButtonProceso1Envio2" Content="2" HorizontalAlignment="Left" Height="43" Margin="78,26,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso1Envio2_Click"/>
-		<Button x:Name="ButtonProceso1Envio3" Content="3" HorizontalAlignment="Left" Height="43" Margin="163,26,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso1Envio3_Click"/>
-		<Label Content="Enviar a proceso:" HorizontalAlignment="Left" Margin="310,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="20" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
-		<Button x:Name="ButtonProceso2Envio1" Content="1" HorizontalAlignment="Left" Height="43" Margin="325,24,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso2Envio1_Click"/>
-		<Button x:Name="ButtonProceso2Envio3" Content="3" HorizontalAlignment="Left" Height="43" Margin="410,24,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso2Envio3_Click"/>
-		<Label Content="Enviar a proceso:" HorizontalAlignment="Left" Margin="559,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="20" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
-		<Button x:Name="ButtonProceso3Envio1" Content="1" HorizontalAlignment="Left" Height="43" Margin="574,26,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso3Envio1_Click"/>
-		<Button x:Name="ButtonProceso3Envio2" Content="2" HorizontalAlignment="Left" Height="43" Margin="659,26,0,0" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.666,0.53" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso3Envio2_Click"/>
-		<Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="117" Margin="49,131,0,0" Stroke="White" VerticalAlignment="Top" Width="698" Grid.Row="1"/>
-		<TextBlock x:Name="TextBlockHistorialProceso1" HorizontalAlignment="Left" Margin="179,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="92" Width="557" Foreground="#FF5F5959">
-			<TextBlock.Background>
-				<SolidColorBrush Color="White" Opacity="0.7"/>
-			</TextBlock.Background>
-		</TextBlock>
-		<Label Content="Historial:" HorizontalAlignment="Left" Margin="78,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="20" Background="{x:Null}" Foreground="White" Grid.Row="1"/>
-
-	</Grid>
+        <Label Content="RELOJ LÓGICO DE LAMPORT" HorizontalAlignment="Left" Margin="163,9,0,0" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="36" Background="{x:Null}" FontWeight="Bold" Height="54" VerticalAlignment="Top">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3CB4B4" Offset="0"/>
+                    <GradientStop Color="#FF3498DB" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="49,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="297,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="201" Margin="547,73,0,0" Stroke="White" VerticalAlignment="Top" Width="200" Grid.RowSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="59" Margin="78,14,0,0" VerticalAlignment="Top" Width="54" Source="Recursos/Reloj.png"/>
+        <Rectangle HorizontalAlignment="Left" Height="49" Margin="49,96,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="49" Margin="297,96,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="PROCESO 2" HorizontalAlignment="Left" Margin="329,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="49" Margin="547,100,0,0" Stroke="White" VerticalAlignment="Top" Width="200">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="PROCESO 3" HorizontalAlignment="Left" Margin="584,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
+        <Label Content="PROCESO 1" HorizontalAlignment="Left" Margin="78,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="24" Background="{x:Null}" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Selecciona destinatario:" HorizontalAlignment="Left" Margin="49,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="16" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
+        <Button x:Name="ButtonProceso1" Content="Enviar mensaje" HorizontalAlignment="Left" Height="34" Margin="66,65,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.57,0.888" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso1_Click"/>
+        <Rectangle Fill="#FF1ABC9C" HorizontalAlignment="Left" Height="117" Margin="49,131,0,0" Stroke="White" VerticalAlignment="Top" Width="698" Grid.Row="1"/>
+        <Label Content="Historial:" HorizontalAlignment="Left" Margin="78,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="20" Background="{x:Null}" Foreground="White" Grid.Row="1"/>
+        <Label Content="Selecciona destinatario:" HorizontalAlignment="Left" Margin="300,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="16" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
+        <Label Content="Selecciona destinatario:" HorizontalAlignment="Left" Margin="547,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.644,-0.774" FontFamily="Century Gothic" FontSize="16" Background="{x:Null}" Foreground="White" Grid.RowSpan="2"/>
+        <Button x:Name="ButtonProceso2" Content="Enviar mensaje" HorizontalAlignment="Left" Height="34" Margin="312,65,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.57,0.888" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso2_Click"/>
+        <Button x:Name="ButtonProceso3" Content="Enviar mensaje" HorizontalAlignment="Left" Height="34" Margin="564,65,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.57,0.888" FontFamily="Calibri" FontWeight="Bold" FontSize="22" Background="White" BorderBrush="#FF1ABC9C" Foreground="#FF1ABC9C" Grid.Row="1" Click="ButtonProceso3_Click"/>
+        <ComboBox x:Name="ComboBoxProceso1" HorizontalAlignment="Left" Margin="66,15,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Height="32" FontFamily="Calibri Light" FontSize="16" Foreground="#FF1ABC9C">
+            <ComboBoxItem Content="Proceso 2" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+            <ComboBoxItem Content="Proceso 3" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+        </ComboBox>
+        <ComboBox x:Name="ComboBoxProceso2" HorizontalAlignment="Left" Margin="312,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Height="32" FontFamily="Calibri Light" FontSize="16" Foreground="#FF1ABC9C">
+            <ComboBoxItem Content="Proceso 1" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+            <ComboBoxItem Content="Proceso 3" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+        </ComboBox>
+        <ComboBox x:Name="ComboBoxProceso3" HorizontalAlignment="Left" Margin="563,16,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" Height="32" FontFamily="Calibri Light" FontSize="16" Foreground="#FF1ABC9C">
+            <ComboBoxItem Content="Proceso 1" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+            <ComboBoxItem Content="Proceso 2" HorizontalAlignment="Left" Width="92" FontWeight="Bold"/>
+        </ComboBox>
+        <TextBox x:Name="TextBoxHistorial" HorizontalAlignment="Left" Height="95" Margin="186,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="545" BorderBrush="White" Foreground="#FF383636" FontFamily="Calibri Light" FontSize="14">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.8"/>
+            </TextBox.Background>
+        </TextBox>
+    </Grid>
 </Window>
